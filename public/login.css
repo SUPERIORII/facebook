@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 1535px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+body {
+  background-color: #f2f4f7;
+}
+
+.login-body {
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.fb-logo {
+  color: #0866ff;
+  font-size: 2.5rem;
+}
+
+.content-message {
+  font-size: 18px;
+}
+
+.logo-title {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.logo-wrapper {
+  color: #0866ff;
+  display: flex;
+  margin-inline: auto;
+  width: 100%;
+  justify-content: center;
+  width: 65px;
+  height: 65px;
+}
+
+form {
+  margin-top: 2rem;
+  width: 28rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: black;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn {
+  color: white;
+  background-color: #0054db;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 20px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 18px;
+  margin-bottom: 14px;
+}
+
+.btn-container a {
+  font-size: 20px;
+  text-decoration: none;
+  color: #535353;
+}
+
+.create-account-option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 70px;
+}
+
+.create-account-option span {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 22px;
+}
+
+hr {
+  width: 300px;
+  height: 0;
+}
+
+.create-account-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.create-account-btn {
+  border: 1px solid #0054db;
+  color: #0054db;
+  padding: 0.6rem;
+  border-radius: 20px;
+  background: none;
+  width: 100%;
+  cursor: pointer;
+  font-size: 18px;
+  width: 100%;
+}
+
+.left-section {
+  display: none;
+}
+
+.links-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+
+.register-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  font-size: large;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.fb-meta {
+  width: 25px;
+  height: 25px;
+  margin-right: 4px;
+  color: #535353;
+}
+
+.fb-meta-span {
+  color: #535353;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+
+@media screen and (min-width: 475px) {
+  .container {
+    width: 100%;
+  }
+
+  form {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .left-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .container {
+    max-width: 475px;
+  }
+
+  .logo-title {
+    display: none;
+  }
+
+  form {
+    background-color: white;
+    padding: 1.5rem 2rem;
+  }
+
+  .login-body {
+    height: 90vh;
+  }
+}

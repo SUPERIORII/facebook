@@ -30,19 +30,19 @@ body {
   font-size: 18px;
 }
 
-.logo-title {
-  font-size: 2.5rem;
-  text-align: center;
-}
-
 .logo-wrapper {
   color: #0866ff;
   display: flex;
   margin-inline: auto;
   width: 100%;
   justify-content: center;
-  width: 65px;
-  height: 65px;
+  margin-top: 50px;
+  /* margin-bottom: 50px; */
+}
+
+.facebook-logo {
+  width: 60px;
+  height: 60px;
 }
 
 form {
@@ -52,15 +52,17 @@ form {
   padding-right: 1rem;
 }
 
-input[type="text"],
+
+
 input[type="password"],
-input[type="email"] {
+input[type="text"] {
   width: 100%;
-  padding: 15px;
+  padding: 20px;
   font-size: 16px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 12px;
   color: black;
+  /* margin-bottom: 10px; */
 }
 
 .btn-container {
@@ -73,26 +75,19 @@ input[type="email"] {
   color: white;
   background-color: #0054db;
   border: none;
-  padding: 0.6rem;
-  border-radius: 20px;
+  padding: 0.9rem;
+  border-radius: 25px;
   width: 100%;
   cursor: pointer;
-  font-size: 18px;
-  margin-bottom: 14px;
+  font-size: 20px;
+  margin-bottom: 25px;
 }
 
 .btn-container a {
   font-size: 20px;
   text-decoration: none;
   color: #535353;
-}
-
-.create-account-option {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  margin-bottom: 70px;
+  margin-bottom: 60px;
 }
 
 .create-account-option span {
@@ -101,9 +96,8 @@ input[type="email"] {
   font-size: 22px;
 }
 
-hr {
-  width: 300px;
-  height: 0;
+.Error {
+  color: red;
 }
 
 .create-account-wrapper {
@@ -115,13 +109,12 @@ hr {
 .create-account-btn {
   border: 1px solid #0054db;
   color: #0054db;
-  padding: 0.6rem;
+  padding: 0.9rem;
   border-radius: 20px;
   background: none;
   width: 100%;
   cursor: pointer;
   font-size: 18px;
-  width: 100%;
 }
 
 .left-section {
@@ -134,7 +127,6 @@ hr {
   align-items: center;
   margin-top: 40px;
 }
-
 
 .register-page {
   display: flex;
@@ -157,16 +149,6 @@ hr {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   font-style: normal;
-}
-
-@media screen and (min-width: 475px) {
-  .container {
-    width: 100%;
-  }
-
-  form {
-    width: 100%;
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -193,5 +175,15 @@ hr {
 
   .login-body {
     height: 90vh;
+  }
+}
+
+@media screen and (min-width: 475px) {
+  .container {
+    width: 100%;
+  }
+
+  form {
+    width: 100%;
   }
 }

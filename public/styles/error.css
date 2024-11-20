@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #d3d3d3;
+}
+
+.right-section {
+  width: 100%;
+  max-width: 1000px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+
+  margin-top: 90px;
+}
+
+.logo-wrapper {
+  color: #0866ff;
+  display: flex;
+  margin-inline: auto;
+  width: 100%;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+.facebook-logo {
+  width: 60px;
+  height: 60px;
+}
+
+.try-again-msg {
+  width: 100%;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.try-again-msg p {
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 14px;
+  color: rgb(70, 69, 69);
+}
+
+.try-again-msg a {
+  font-size: 18px;
+  color: #003994;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+button {
+  border-radius: 3px;
+  border: 2px solid #0054db;
+  background-color: rgb(215, 224, 228);
+  padding: 0.5rem;
+}

